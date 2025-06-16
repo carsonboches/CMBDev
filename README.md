@@ -54,7 +54,8 @@ After downloading or cloning this project, run the following command in the proj
 
 In the project directory, run:
 
-`npm start`
+`cd server`
+`node server.js`
 
 This runs the app in the development mode.
 Open [http://localhost:3000] to view it in your browser.
