@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/scheduler.js" defer></script>
+    <!-- React CDN Links -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel CDN -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>CMBDev | Schedule Appointment</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main -->
+    <main id="scheduler-body">
+      <h2>Select Appointment Time</h2>
+      <div id="scheduler-wrapper">
+        <div id="scheduler"></div>
+      </div>
+
+      <h2>Your Selected Appointment</h2>
+      <form id="scheduler-form" method="POST" novalidate>
+        <div>
+          <div id="selected-appointment">No Time Selected</div>
+        </div>
+        <div class="form-row">
+          <label for="first-name">First Name:</label>
+          <input id="first-name" name="first-name" type="text" />
+        </div>
+        <div class="form-row">
+          <label for="last-name">Last Name:</label>
+          <input id="last-name" name="last-name" type="text" />
+        </div>
+        <div class="form-row">
+          <label for="e-mail">E-Mail <small>(optional)</small>:</label>
+          <input id="e-mail" name="e-mail" type="email" />
+        </div>
+        <div class="form-row">
+          <label for="phone-number"
+            >Phone Number:<small>(include dashes)</small></label
+          >
+          <input
+            id="phone-number"
+            name="phone-number"
+            type="tel"
+            placeholder="e.g., 123-456-7890"
+          />
+        </div>
+        <button type="submit">Schedule Appointment</button>
+        <div id="form-feedback"></div>
+      </form>
+    </main>
+
+    <!-- Success Message -->
+    <div id="appt-confirmation"></div>
+    <!-- React Component -->
+    <script type="text/babel">
+      function returnHome() {
+        window.location.href = "/";
+      }
+
+      function ApptConfirmation({ firstName, appointmentText }) {
+        return (
+          <div>
+            <p>Thank you for your interest, {firstName}!</p>
+            <p>See you on {appointmentText}!</p>
+            <button onClick={returnHome}>Return Home</button>
+          </div>
+        );
+      }
+
+      window.ApptConfirmation = ApptConfirmation;
+    </script>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

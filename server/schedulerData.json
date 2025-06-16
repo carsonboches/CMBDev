@@ -1,0 +1,16 @@
+{
+  "availableDays": [
+    "Tuesday, June 17",
+    "Wednesday, June 18",
+    "Thursday, June 19",
+    "Friday, June 20",
+    "Saturday, June 21"
+  ],
+  "availableTimes": [
+    "9:00am",
+    "11:00am",
+    "1:00pm",
+    "3:00pm"
+  ],
+  "bookedAppointments": []
+}
