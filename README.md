@@ -38,8 +38,8 @@
 
 - **HTML5**: Structured and semantic markup for user accessibility.
 - **CSS3**: Responsive styling for fluid layouts across all devices.
-- **JavaScript**: Seamless logic for appointment scheduling and DOM manipulation.
-- **React**: Dynamic component displaying an appointment confirmation message.
+- **JavaScript**: Functional logic for appointment scheduling and DOM manipulation.
+- **React**: Dynamic component displaying appointment confirmation message.
 - **Express**: Backend server framework used to handle the routing of the app and serve static files.
   
     - The **server** serves the static files from the `public` directory, displays the main `index.html` page, and handles interactions with the appointment scheduler.
@@ -49,13 +49,16 @@
 ## How to Run the Project Locally
 
 After downloading or cloning this project, run the following command in the project directory to install all required dependencies:
-
-`npm install`
+```bash
+npm install
+```
 
 In the project directory, run:
 
-`cd server`
-`node server.js`
+```bash
+cd server
+node server.js
+```
 
 This runs the app in the development mode.
 Open [http://localhost:3000] to view it in your browser.
