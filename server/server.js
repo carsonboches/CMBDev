@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const updateSchedule = require("./functions/updateSchedule.js");
 const bookAppointment = require("./functions/bookAppointment.js");
 
@@ -22,5 +22,5 @@ app.get("/schedulerData", (req, res) => {
 app.post("/schedulerData", bookAppointment);
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at PORT ${PORT}`);
 });
