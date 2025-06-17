@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/schedulerData";
+const URL = "/schedulerData";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Fetch Scheduler Data
